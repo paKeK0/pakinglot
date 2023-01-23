@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>My Website</title>
+</head>
+    
+     <header>
+
+    <a href="home.html" class="logo"><span>PARKING</span>LOT</a>
+
+    <input type="checkbox" id="menu-bar">
+    <label for="menu-bar" class="fas fa-bars"></label>
+
+    <nav class="navbar">
+        <a href="home.html">HOME</a>
+        <a href="about2.html">ABOUT</a>
+        <a href="registration.html">REGISTRATION</a>
+         <a href="reservation.html">RESERVATION</a>
+        <a href="#contact">CONTACT</a>
+        <a href="#map">MAP</a>    
+
+    </nav>
+
+</header>
+    
+    
+    <style>
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+	font-family: 'montserrat', monospace;
+	scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+    
+	justify-content: center;
+}
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+p {
+	color: black;
+	font-size: 1.4rem;
+	margin-top: 5px;
+	line-height: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 0.05rem;
+}
+.section-title {
+	font-size: 4rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	text-align: center;
+}
+.section-title span {
+	color: crimson;
+}
+
+.cta {
+	display: inline-block;
+	padding: 10px 30px;
+	color: white;
+	background-color: transparent;
+	border: 2px solid crimson;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	margin-top: 30px;
+	transition: 0.3s ease;
+	transition-property: background-color, color;
+}
+.cta:hover {
+	color: white;
+	background-color: fushia;
+}
+.brand h1 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: white;
+}
+.brand h1 span {
+	color: fuchsia;
+}
+
+/* Header section */
+#header {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: auto;
+}
+#header .header {
+	min-height: 8vh;
+	background-color: rgba(31, 30, 30, 0.24);
+	transition: 0.3s ease background-color;
+}
+/* mv Section */
+#mv .mv {
+	flex-direction: column;
+	text-align: center;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+#mv .p-top {
+	max-width: 500px;
+	margin: 0 auto;
+}
+#mv .service-bottom {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 50px;
+}
+#mv .service-item {
+	flex-basis: 80%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	padding: 30px;
+	border-radius: 10px;
+	background-image: url(wqw.jpg);
+	background-size: cover;
+	margin: 10px 5%;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+#mv .service-item::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+    background-image: linear-gradient(60deg, #485563 100%);
+	opacity: 0.9;
+	z-index: -1;
+}
+#mv .service-bottom .icon {
+	height: 80px;
+	width: 80px;
+	margin-bottom: 20px;
+}
+#mv .service-item h2 {
+	font-size: 3rem;
+	color: black;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+#mv .service-item p {
+	color: black;
+	text-align: left;
+}
+/* End Services Section */
+
+
+/* Keyframes */
+@keyframes hamburger_puls {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.4);
+	}
+}
+@keyframes text_reveal_box {
+	50% {
+		width: 100%;
+		left: 0;
+	}
+	100% {
+		width: 0;
+		left: 100%;
+	}
+}
+@keyframes text_reveal {
+	100% {
+		color: white;
+	}
+}
+@keyframes text_reveal_name {
+	100% {
+		color: crimson;
+		font-weight: 500;
+	}
+}
+/* End Keyframes */
+
+/* Media Query For Tablet */
+@media only screen and (min-width: 768px) {
+	.cta {
+		font-size: 2.5rem;
+		padding: 20px 60px;
+	}
+	h1.section-title {
+		font-size: 6rem;
+	}
+
+	/* Hero */
+	#hero h1 {
+		font-size: 7rem;
+	}
+	/* End Hero */
+
+	/* Services Section */
+	#mv .service-bottom .service-item {
+		flex-basis: 45%;
+		margin: 2.5%;
+	}
+	/* End mv Section */
+
+	
+
+	
+/* End Media Query For Tablet */
+
+/* Media Query For Desktop */
+@media only screen and (min-width: 1200px) {
+
+	#services .service-bottom .service-item {
+		flex-basis: 22%;
+		margin: 1.5%;
+	}
+}
+/* End  Media Query For Desktop */
+    </style>
+
+<body>
+
+           
+   
+  <section id="mv">
+    <div class="mv container">
+      <div class="p-top">
+        <h1 class="section-title">PARKING<span>L</span>OT</h1>
+        <p>The project's developers want to make it simple for community members to use our system to request help with parking spots. We thus think about how we may help the community in that area. You can register utilizing websites or apps by completing the application with your basic information. Despite the ease with which modern technology makes it possible to track your whereabouts, this study implies that making use of our project will help to improve and lessen traffic in the area of the community.</p>
+      </div>
+        
+        <div class="service-bottom">
+        <div class="service-item">
+          <div class="icon"><img src="parking-lot.png" alt="">"></div>
+          <h2>OBJECTIVE</h2>
+          <p>To lessen the number of incidents in the neighborhood caused by inappropriate parking.</p>
+        </div>
+      
+        <div class="service-item">
+          <div class="icon"><img src="parking-lot.png" alt="">"></div>
+          <h2>MISSION</h2>
+          <p>We aim to provide a technology system that is efficient and convenient for users.</p>
+        </div>
+        <div class="service-item">
+          <div class="icon"><img src="parking-lot.png" alt="">"></div>
+          <h2>VISION</h2>
+          <p>To enhance the community and reduce traffic congestion. </p>
+        </div>
+       
+      </div>
+    </div>
+  </section>
+
+
+            
+</body>
+</html>
